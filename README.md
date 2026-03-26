@@ -1,3 +1,10 @@
+> # controller 
+> 在client则是client专用
+> 在 admin 则是管理端专用
+> 在 coach 则是教练端专用
+> 在外面则是通用
+
+
 `/src/main/resources/dropDB.sql` 
 > 清除所有文件
 

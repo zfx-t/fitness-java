@@ -12,13 +12,9 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping("/index")
 public class IndexController {
-    @Resource
-    UserProfileRepository userProfileRepository;
 
     @GetMapping
     public String get(){
-        ArrayList<UserProfile> userProfiles = new ArrayList<>();
-        userProfileRepository.findAll().forEach(userProfiles::add);
-        return userProfiles.toString();
+        return "hello world";
     }
 }
