@@ -23,6 +23,6 @@ public class BannerServiceImpl implements BannerService {
     public Boolean addBanner(Banner banner) {
         Banner save = bannerRepository.save(banner);
         Optional<Banner> byId = bannerRepository.findById(Long.valueOf(save.getId()));
-        return byId.isEmpty();
+        return byId.isPresent();
     }
 }

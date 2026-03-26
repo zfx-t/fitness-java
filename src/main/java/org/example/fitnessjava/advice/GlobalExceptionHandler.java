@@ -1,5 +1,6 @@
 package org.example.fitnessjava.advice;
 
+import me.chanjar.weixin.common.error.WxErrorException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,6 +18,10 @@ public class GlobalExceptionHandler {
     }
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public String handleJsonError(Exception e) {
+        return "系统异常：" + e.getMessage();
+    }
+    @ExceptionHandler(WxErrorException.class)
+    public String handleWXError(Exception e) {
         return "系统异常：" + e.getMessage();
     }
 }

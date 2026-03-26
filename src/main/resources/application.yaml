@@ -20,5 +20,10 @@ springdoc: # 生产记的关闭
   swagger-ui:
     enabled: true
 
+wx:
+  miniapp:
+    appid: "213"
+    appsecret: "123"
+
 server:
   port: 8080

@@ -1,5 +1,6 @@
 package org.example.fitnessjava.controller.client;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.annotation.Resource;
 import org.example.fitnessjava.pojo.Banner;
 import org.example.fitnessjava.pojo.Coach;
@@ -27,6 +28,7 @@ public class HomeController {
     BannerService bannerService;
 
     @GetMapping
+    @Operation(summary = "获取首页信息")
     public ClientHomeResponse home(@RequestParam(defaultValue = "-1") String userId) {
         HealthSurvey survey = null;
         if (userId == null || userId.isEmpty() || userId.equals("-1")) {

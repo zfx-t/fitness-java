@@ -4,6 +4,7 @@
 > 在 coach 则是教练端专用
 > 在外面则是通用
 
+#### API: http://localhost:8080/swagger-ui/index.html
 
 `/src/main/resources/dropDB.sql` 
 > 清除所有文件
