@@ -24,6 +24,7 @@ public class Coach {
     private int classCount;
     private java.util.List<String> tags;
     private String phone;
+    private Boolean featured;
     @Enumerated(EnumType.STRING)
     private Status status;
     public enum Status {

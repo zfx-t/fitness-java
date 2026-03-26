@@ -1,4 +1,4 @@
-package org.example.fitnessjava.pojo;
+package org.example.fitnessjava.pojo.penddingEntity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,36 +7,40 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 
-import java.util.Date;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class HealthSurvey {
+public class MemberProfile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Integer userId;
+
     private String name;
+    private String avatar;
     private String gender;
     private Integer age;
 
-    private Double height;
-    private Double weight;
+    private String phone;
+    private String level;
+    private String target;
 
-    private String goal;
-    private String frequency;
+    private Integer attendance;
 
-    private List<String> healthIssues;
+    private String nextClass;
 
-    private String notes;
-    @CreatedDate
-    private String submittedAt;
+    private List<String> tags;
+
+    private String expireDate;
+    private Integer sessionsLeft;
+    private Integer totalSessions;
+
+    private String joinDate;
+    private String packageType;
 }

@@ -11,32 +11,20 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class HealthSurvey {
-
+public class Banner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    private Integer userId;
-    private String name;
-    private String gender;
-    private Integer age;
-
-    private Double height;
-    private Double weight;
-
-    private String goal;
-    private String frequency;
-
-    private List<String> healthIssues;
-
-    private String notes;
+    private String image;
+    private String linkType;
+    private String linkValue;
     @CreatedDate
-    private String submittedAt;
+    private Date createdAt;
+    @LastModifiedDate
+    private Date updatedAt;
 }
